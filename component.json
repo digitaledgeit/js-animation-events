@@ -1,0 +1,9 @@
+{
+  "name": "animation-events",
+  "scripts": ["index.js"],
+  "development": {
+    "dependencies": {
+      "component/assert": "*"
+    }
+  }
+}
