@@ -6,7 +6,7 @@ Bind and unbind animation events.
 
 Component:
 
-    component install animation-events
+    component install digitaledgeit/js-animation-events
 
 ## Usage
 
