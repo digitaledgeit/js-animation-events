@@ -53,7 +53,7 @@ function style(el) {
 module.exports = {
 
   /**
-   * Whether animations are supported by the browser
+   * Get whether animations are supported by the browser
    * @type  {boolean}
    */
   supported: !!prop,
@@ -71,20 +71,6 @@ module.exports = {
     var cs = style(el);
 
     return cs[prop].length > 0 && cs[prop] !== '0s';
-  },
-
-  /**
-   * Add a callback for a single animation event
-   * @param   {HTMLElement} el        The element
-   * @param   {string}      event     The event - `start`, `end` or `iteration`
-   * @param   {function}    callback  The callback
-   */
-  once: function(el, event, callback) {
-    var self = this;
-    return this.bind(el, event, function fn() {
-      callback.apply(el, arguments);
-      self.unbind(el, event, fn);
-    });
   },
 
   /**
@@ -125,6 +111,20 @@ module.exports = {
 
     el.removeEventListener(event, callback);
     return this;
+  },
+
+  /**
+   * Add a callback for a single animation event
+   * @param   {HTMLElement} el        The element
+   * @param   {string}      event     The event - `start`, `end` or `iteration`
+   * @param   {function}    callback  The callback
+   */
+  once: function(el, event, callback) {
+    var self = this;
+    return this.bind(el, event, function fn() {
+      callback.apply(el, arguments);
+      self.unbind(el, event, fn);
+    });
   }
 
 };

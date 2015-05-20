@@ -1,5 +1,7 @@
 # animation-events
 
+Bind and unbind animation events.
+
 ## Installation
 
 Component:
@@ -29,11 +31,23 @@ Component:
 
 #### .supported
 
+Get whether animations are supported by the browser.
+
 #### .has(el)
+
+Get whether an element has an animation applied.
 
 #### .bind(el, event, callback)
 
+Add a callback for an animation event (`start`, `end` or `iteration`).
+
 #### .unbind(el, event, callback)
+
+Remove a callback for an animation event (`start`, `end` or `iteration`).
+
+#### .once(el, event, callback)
+
+Add a callback for a single animation event (`start`, `end` or `iteration`).
 
 ## Building
 
