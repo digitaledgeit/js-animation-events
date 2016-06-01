@@ -1,4 +1,8 @@
 {
   "name": "animation-events",
-  "version": "0.0.1"
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "digitaledgeit/js-animation-events"
+  }
 }
